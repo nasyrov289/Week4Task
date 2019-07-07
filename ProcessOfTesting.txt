@@ -33,12 +33,12 @@ POST request creates the resources
 
 2) Sent a POST request. Then I sent a GET request and received the next:
 
-	    {
+	        {
         	"id": 1,
         	"admin_name": "Nasyrov Alymzhan",
         	"email": "nasyrov289@gmail.com",
         	"password": "BooGAGA"
-    	}
+    	        }
 
 3) Testing of POST request is done
 
@@ -63,12 +63,12 @@ PUT request updates the resources
 
 3) Sent a PUT request. Then I sent a GET request and received the next:
 
-    	{
+    		{
         	"id": 1,
         	"admin_name": "NEXT ADMIN",
         	"email": "admin@mail.com",
         	"password": "password"
-    	}
+    		}
 
 4) Testing of PUT request is done
 
