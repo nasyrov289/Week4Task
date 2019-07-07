@@ -1,0 +1,89 @@
+********** The process of testing API **********
+
+
+
+
+***** Test GET request *****
+
+GET request gets the resources
+
+1) Run SpringCloudMysqlApplication.java for run Spring main method
+
+2) Launched a browser and wrote the address of the local host http://localhost:8080/
+(I saw an error because the address was not quite correct. It was empty)
+
+3) Launched Postman and entered http://localhost:8080/admin in the request field. Sent a GET request and received an empty field with [].
+
+4) Testing of GET request is done
+
+
+
+
+***** Test POST request *****
+
+POST request creates the resources
+
+1) Chose Body tab and entered next JSON-format code:
+
+		{
+    		"admin_name": "Nasyrov Alymzhan",
+    		"email": "nasyrov289@gmail.com",
+    		"password": "BooGAGA"
+		}
+
+2) Sent a POST request. Then I sent a GET request and received the next:
+
+	    {
+        	"id": 1,
+        	"admin_name": "Nasyrov Alymzhan",
+        	"email": "nasyrov289@gmail.com",
+        	"password": "BooGAGA"
+    	}
+
+3) Testing of POST request is done
+
+
+
+
+
+
+***** Test PUT request *****
+
+PUT request updates the resources
+
+1) To update a recent resource, in the url field I accessed the resource through its Id: http://localhost:8080/admin/1
+
+2) Write next JSON code:
+
+		{
+    		"admin_name": "NEXT ADMIN",
+    		"email": "admin@mail.com",
+    		"password": "password"
+		}
+
+3) Sent a PUT request. Then I sent a GET request and received the next:
+
+    	{
+        	"id": 1,
+        	"admin_name": "NEXT ADMIN",
+        	"email": "admin@mail.com",
+        	"password": "password"
+    	}
+
+4) Testing of PUT request is done
+
+
+
+
+
+
+
+***** Test DELETE request *****
+
+DELETE request deletes the resources
+
+1) I sent DELETE request and deleted resources by Id : http://localhost:8080/admin/1
+
+2) Sent GET request and received empty field
+
+3) Testing of DELETE request is done
